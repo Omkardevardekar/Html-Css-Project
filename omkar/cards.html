@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .con {
+            display: flex;
+            flex-wrap: wrap;  
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+            min-height: 100vh;
+            background-image: linear-gradient( 135deg, #A0FE65 10%, #FA016D 100%);
+        }
+        .con1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap; 
+            padding: 10px;
+            height: auto;
+            background-image: linear-gradient( 135deg, #EECE13 10%, #B210FF 100%);
+            border: 5px double black;
+            position: relative;
+            width: 65%;
+        }
+        .card {
+            width: 280px;  
+            height: auto;  
+            margin: 10px;
+            border: 2px solid black;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 35vh;
+            object-fit: cover;
+        }
+        
+        .image {
+            position:absolute;
+            top: 5%;
+            left: 5%;
+            display: flex;
+            align-items: center;
+            gap: 185px;
+        }
+        .image img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .image i {
+            font-size: 20px;
+            color: white;
+        }
+        .container {
+            padding: 10px;
+            text-align: center;
+        }
+        .container input {
+            width: 90%;
+            border: none;
+            border-bottom: 2px solid gray;
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+            background: transparent;
+        }
+        .container p {
+            font-size: 14px;
+            color: #333;
+            margin-top: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            font-weight: bold;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            height: 55px;
+            background-color: rgb(61, 2, 87);
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="con1">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://imgs.search.brave.com/DAvD8dKBTSUY9j_5i_peHezG6OsJA-cnGZjPk_QDEpc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtY2RuLmJyaWRn/ZW1hbmltYWdlcy5j/b20vYXBpLzEuMC9p/bWFnZS82MDB3bS5Y/WFguMjgwMDQ2MjAu/NzA1NTQ3NS8yNjM2/OTAzLmpwZw" alt="Background">
+                <div class="image">
+                    <img src="https://imgs.search.brave.com/wdFPFTwE5icj-Ay25pNB2N12JxF8_2cSAPD3X7qoHEE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjY1/NDAxOTc0L3Bob3Rv/L25pa29sYS10ZXNs/YS1wb3J0cmFpdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/ZmdsZVpBTkEwMDJU/cFctNjZJVWs2NC16/a1g5UENZZ3p5U3ZE/NTJJRE43QT0" alt="Profile">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <div class="container">
+                    <input type="text" value="Nikola Tesla" readonly />
+                    <input type="text" value="The Visionary" readonly />
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fugiat nemo fuga placeat.</p>
+                </div>
+                <button onclick="document.location='https://en.wikipedia.org/wiki/Nikola_Tesla'">READ MORE </button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://imgs.search.brave.com/EtElifEW2ZG69TQk7BHxVz_hgBDrcG5FmNRuI4LpbRk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmdy/LWFzc2V0cy5jb20v/aW1hZ2VzL1MvY29t/cHJlc3NlZC5waG90/by5nb29kcmVhZHMu/Y29tL2F1dGhvcnMv/MTQyOTExNDk2NGkv/OTgxMC5fVVgyMDBf/Q1IwLDE0LDIwMCwy/MDBfLmpwZw" alt="Background">
+                <div class="image">
+                    <img src="https://imgs.search.brave.com/WXKbepTPgTeU8v90tvvZ3IVjGlk9Mvpcw1KcpsEkm_A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9k/L2QzL0FsYmVydF9F/aW5zdGVpbl9IZWFk/LmpwZw" alt="Profile">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <div class="container">
+                    <input type="text" value="Albert Einstein" readonly />
+                    <input type="text" value="The Genius" readonly />
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fugiat nemo fuga placeat.</p>
+                </div>
+                <button onclick="document.location='https://en.wikipedia.org/wiki/Albert_Einstein'">READ MORE</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://imgs.search.brave.com/VQ3NRUZv1R2I9bD07Td6WEZxCfzC0q7LVYmAyVI0fJM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bm9iZWxwcml6ZS5v/cmcvaW1hZ2VzL21h/cmllLWN1cmllLTEy/ODM1LXBvcnRyYWl0/LW1lZGl1bS5qcGc" alt="Background">
+                <div class="image">
+                    <img src="https://imgs.search.brave.com/qNTp0kYfu-FKak2JM8IvZRYgSsI1Ifq-OLW420ihCbk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bnBzLmdvdi9jb21t/b24vdXBsb2Fkcy9j/cm9wcGVkX2ltYWdl/L3ByaW1hcnkvMzZC/RDEwRkUtOUU0NS1B/NEZELTg4NTBBQjQx/MTIwRUFFN0QuanBn/P3dpZHRoPTYwMCZx/dWFsaXR5PTkwJm1v/ZGU9Y3JvcA" alt="Profile">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <div class="container">
+                    <input type="text" value="Marie Curie" readonly />
+                    <input type="text" value="The Pioneer" readonly />
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fugiat nemo fuga placeat.</p>
+                </div>
+                <button onclick="document.location='https://en.wikipedia.org/wiki/Marie_Curie'">READ MORE</button>
+            </div>
+    
+        </div>
+    </div>
+</body>
+</html>
